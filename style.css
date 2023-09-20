@@ -1,0 +1,24 @@
+
+#cv{
+    /* display: none; */
+    background-image: url('bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+#template{
+    display: none;
+}
+/* .container img{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+.image{
+     border: 2px solid;
+     border-radius: 45%;
+     width: 70%;
+}
+.TempBg{
+    background-color: rgb(99, 191, 245);
+}
