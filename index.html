@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume Generator </title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <div class="container" id="cv">
+        <!-- <img src="bg.png" alt=""> -->
+        <h1 class="text-center my-2"> <b> Resume Generator </b></h1>
+        <p class="text-center"><b> Fill Information about yourself!</b></p>
+        <div class="row">
+
+            <div class="col-md-6">
+                <!-- frst column -->
+                <h3><b>Personal Information</b></h3>
+                <div class="form">
+                    <label for="nameField">Enter Your Name :</label>
+                    <input type="text" id="nameField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form my-2">
+                    <label for="contactField">Enter Your Contact No. :</label>
+                    <input type="text" id="contactField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form my-2">
+                    <label for="addressField">Enter Your Address:</label>
+                    <textarea id="addressField" placeholder="Enter here" class="form-control" rows="4"></textarea>
+                </div>
+                <div class="form mt-2">
+                    <label for="emailField">Enter Your Email :</label>
+                    <input type="text" id="emailField" placeholder="Enter here" class="form-control">
+                </div>
+                <p style="margin: 5px;"><u><b>Important Link </b></u></p>
+
+                <div class="form">
+                    <label for="linkedin">Enter Your Linkedin Account :</label>
+                    <input type="text" id="linkedin" placeholder="Enter here" class="form-control">
+                </div>
+
+
+            </div>
+            <div class="col md-6">
+                <!-- Secon column -->
+                <h3><b>Professional Information</b></h3>
+                <div class="form">
+                    <label for="Ofield">Objective</label>
+                    <textarea id="Ofield" rows="2.5" placeholder="Enter here" class="form-control"></textarea>
+                </div>
+
+
+                <div class="form" id="wA">
+                    <label>Work Experience</label>
+                    <textarea rows="2.5" placeholder="Enter here" class="form-control wfield"></textarea>
+
+                    <div class="container text-center mt-2 " id="wAddbutton">
+                        <button onclick="addWbutton()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <div class="form" id="qA">
+                    <label for="">Qulification</label>
+                    <textarea rows="2.5" placeholder="Enter here" class="form-control qfield"></textarea>
+
+                    <div class="container text-center mt-2" id="qAddbutton">
+                        <button onclick="addQbutton()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center my-5">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+    </div>
+
+    <div class="container" id="template">
+        <div class="row">
+            <div class="col-md-4 py-4 TempBg text-center">
+                <img src="profile.jpg" alt="" class="img-fluid image">
+
+                <div class="container">
+                    <p id="nameT1"><strong>Priyan Yadav</strong></p>
+                    <p id="addT1">New link Road,Malad(E),Mumbai-40067</p>
+                    <p id="conT1">9147856245,9856423655</p>
+                    <p id="emailT1">Sk@gmail.com</p>
+                    <hr>
+                    <!-- <p ><a href="#1">https://www.facebook.com/ </a> </p> -->
+                    <p id="linkT1"><a href="#1">https://www.linkedin.com/</a></p>
+                    <!-- <p><a href="#1">https://www.instagram.com/ </a></p> -->
+                </div>
+            </div>
+            <div class="col-md-8 ">
+                <h1 id="nameT2" style="text-align: right; font-weight: 950;"> Priyan Yadav</h1>
+                <!-- /Objective -->
+                <div class="card mt-4">
+                    <div class="card-header TempBg ">
+                        <h2>Objective</h2>
+                    </div>
+                    <div class="card-body">
+                        <p id="oT">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa perferendis, esse
+                            obcaecati rem doloremque repellat velit dolores consequuntur optio nostrum modi numquam
+                            mollitia quas ut qui omnis repellendus inventore totam.</p>
+                    </div>
+                </div>
+
+                <!-- Work Exprience -->
+                <div class="card mt-4">
+                    <div class="card-header TempBg ">
+                        <h2>Work Exprience</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul id="wT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+
+
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        </ul>
+
+                    </div>
+                    <!-- Acedamic -->
+                    <div class="card mt-4">
+                        <div class="card-header TempBg ">
+                            <h2>Qulification</h2>
+                        </div>
+                        <div class="card-body">
+                            <ul id="qT">
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            </ul>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="container mt-4 text-center">
+                        <button onclick="DownloadCV()" class="btn TempBg">Download CV</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <script src="Script.js"></script>
+</body>
+
+</html>
